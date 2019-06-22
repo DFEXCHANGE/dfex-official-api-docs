@@ -45,7 +45,7 @@ NONE
   }]
 }
 ```
-
+### Get Currencies
 
 **HTTP Requests**
 
