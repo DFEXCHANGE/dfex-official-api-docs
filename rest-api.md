@@ -1,6 +1,6 @@
-DFEX
+**DFEX**
 
-/polarisex/coin/currencies
+**/polarisex/coin/currencies**
 
 Return Parameters
 
