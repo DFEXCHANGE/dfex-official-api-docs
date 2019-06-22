@@ -47,14 +47,10 @@ NONE
 ```
 ### Get Currencies
 
-**HTTP Requests**
-
-GET /api/account/v3/currencies
-
 **Request Sample**
-
-GET /polarisex/coin/currencies
-
+```
+GET /api/account/v3/currencies
+```
 **Return Parameters**
 
 Parameters	    
