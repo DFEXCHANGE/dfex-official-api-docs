@@ -1,4 +1,51 @@
-**DFEX**
+# **DFEX**
+
+
+### Exchange information
+```
+GET /polarisex/coin/exchangeInfo
+```
+Current exchange trading rules and symbol information
+
+**Weight:**
+1
+
+**Parameters:**
+NONE
+
+**Response:**
+```javascript
+{
+  "timezone": "UTC",
+  "serverTime": 1508631584636,
+  "rateLimits": [
+    // These are defined in the `ENUM definitions` section under `Rate limiters (rateLimitType)`.
+    // All limits are optional.
+  ],
+  "exchangeFilters": [
+    // There are defined in the `Filters` section.
+    // All filters are optional.
+  ],
+  "symbols": [{
+    "symbol": "ETHBTC",
+    "status": "TRADING",
+    "baseAsset": "ETH",
+    "baseAssetPrecision": 8,
+    "quoteAsset": "BTC",
+    "quotePrecision": 8,
+    "orderTypes": [
+      // These are defined in the `ENUM definitions` section under `Order types (orderTypes)`.
+      // All orderTypes are optional.
+    ],
+    "icebergAllowed": false,
+    "filters": [
+      // There are defined in the `Filters` section.
+      // All filters are optional.
+    ]
+  }]
+}
+```
+
 
 **HTTP Requests**
 
@@ -18,19 +65,29 @@ can_deposit	    String	            availability of depositing, 0 = not available
 can_withdraw	String	            availability of withdrawal，0 = not available，1 = available
 min_withdrawal	String	            the minimum withdrawal limit
 
-Return Sample
+**Response:**
+```javascript
 
 {
-         "can_deposit":"1",
-         "can_withdraw":"1",
-         "currency":"BTC",
-         "min_withdrawal":"0.01",
-         "name":""
-     },
-     {
-         "can_deposit":"1",
-         "can_withdraw":"1",
-         "currency":"LTC",
-         "min_withdrawal":"0.1",
-         "name":""
-     }
+  "attachment": [
+    {
+      "can_deposit": 1,
+      "can_withdraw": 1,
+      "currencyId": 0,
+      "currency": "BTC",
+      "min_withdrawal": 0.01,
+      "name": ""
+    },
+    {
+      "can_deposit": 1,
+      "can_withdraw": 1,
+      "currencyId": 0,
+      "currency": "LTC",
+      "min_withdrawal": 0.1,
+      "name": ""
+    }
+  ],
+  "status": 200,
+  "message": null
+}
+```
