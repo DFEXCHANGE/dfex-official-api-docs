@@ -1,10 +1,17 @@
 **DFEX**
 
-**/polarisex/coin/currencies**
+**HTTP Requests**
 
-Return Parameters
+GET /api/account/v3/currencies
+
+**Request Sample**
+
+GET /polarisex/coin/currencies
+
+**Return Parameters**
 
 Parameters	    Parameters Types	Description
+:---:|:---:|:---:
 currency	    String	            Token code
 name	        String	            Token name
 can_deposit	    String	            availability of depositing, 0 = not available，1 = available
